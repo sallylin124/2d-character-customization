@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cartoon Rig Demo</title>
+<style>
+  body { margin: 0; background: #f6f7fb; display:flex; height:100vh; align-items:center; justify-content:center; }
+  .panel { position: fixed; top:16px; left:16px; background:#fff; border-radius:12px; padding:12px 14px; box-shadow:0 8px 24px rgba(0,0,0,.08); font-family: ui-sans-serif, system-ui; }
+  button { margin-right:8px; padding:6px 10px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; }
+  button:hover { background:#f2f2f2; }
+  svg { width: 320px; height: 480px; }
+</style>
+</head>
+<body>
+<div class="panel">
+  <button onclick="applyPose('idle')">Idle</button>
+  <button onclick="applyPose('wave')">Wave</button>
+  <button onclick="animateWave()">Animate Wave</button>
+</div>
+
+<svg viewBox="0 0 200 300">
+  <!-- 軀幹 -->
+  <g id="torso" transform="translate(100,160)">
+    <rect x="-20" y="-40" width="40" height="80" rx="10" fill="#ffd28e"></rect>
+
+    <!-- 左上臂（角色視角左） -->
+    <g id="lUpperArm" transform="translate(-20,-30)">
+      <rect x="-8" y="0" width="16" height="40" rx="8" fill="#ffb86b"></rect>
+      <circle cx="0" cy="0" r="3" fill="#8a5b3d"></circle>
+      <!-- 左前臂 -->
+      <g id="lForearm" transform="translate(0,40)">
+        <rect x="-7" y="0" width="14" height="36" rx="7" fill="#ffb86b"></rect>
+        <!-- 左手 -->
+        <g id="lHand" transform="translate(0,36)">
+          <circle r="6" fill="#ffd28e"></circle>
+        </g>
+      </g>
+    </g>
+
+    <!-- 右上臂 -->
+    <g id="rUpperArm" transform="translate(20,-30)">
+      <rect x="-8" y="0" width="16" height="40" rx="8" fill="#ffb86b"></rect>
+      <circle cx="0" cy="0" r="3" fill="#8a5b3d"></circle>
+      <!-- 右前臂 -->
+      <g id="rForearm" transform="translate(0,40)">
+        <rect x="-7" y="0" width="14" height="36" rx="7" fill="#ffb86b"></rect>
+        <!-- 右手 -->
+        <g id="rHand" transform="translate(0,36)">
+          <circle r="6" fill="#ffd28e"></circle>
+        </g>
+      </g>
+    </g>
+
+    <!-- 頭 -->
+    <g id="head" transform="translate(0,-60)">
+      <circle r="22" fill="#ffe2b8" />
+      <circle cx="-7" cy="-3" r="3" fill="#333" />
+      <circle cx="7" cy="-3" r="3" fill="#333" />
+      <rect x="-8" y="6" width="16" height="4" rx="2" fill="#333" />
+    </g>
+
+    <!-- 左大腿 -->
+    <g id="lThigh" transform="translate(-10,40)">
+      <rect x="-7" y="0" width="14" height="38" rx="7" fill="#ffb86b"></rect>
+      <!-- 左小腿 -->
+      <g id="lShin" transform="translate(0,38)">
+        <rect x="-6" y="0" width="12" height="34" rx="6" fill="#ffb86b"></rect>
+        <ellipse id="lFoot" cx="0" cy="36" rx="10" ry="6" fill="#8ab6ff"></ellipse>
+      </g>
+    </g>
+
+    <!-- 右大腿 -->
+    <g id="rThigh" transform="translate(10,40)">
+      <rect x="-7" y="0" width="14" height="38" rx="7" fill="#ffb86b"></rect>
+      <!-- 右小腿 -->
+      <g id="rShin" transform="translate(0,38)">
+        <rect x="-6" y="0" width="12" height="34" rx="6" fill="#ffb86b"></rect>
+        <ellipse id="rFoot" cx="0" cy="36" rx="10" ry="6" fill="#8ab6ff"></ellipse>
+      </g>
+    </g>
+  </g>
+</svg>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  // 關節樹：指定每個部件的可旋轉群組與旋轉中心（相對於該群組原始 transform）
+  const JOINTS = {
+    head:      { el: '#head',      origin: '0px 22px' },     // 下緣中心
+    lUpperArm: { el: '#lUpperArm', origin: '0px 0px'  },
+    lForearm:  { el: '#lForearm',  origin: '0px 0px'  },
+    rUpperArm: { el: '#rUpperArm', origin: '0px 0px'  },
+    rForearm:  { el: '#rForearm',  origin: '0px 0px'  },
+    lThigh:    { el: '#lThigh',    origin: '0px 0px'  },
+    lShin:     { el: '#lShin',     origin: '0px 0px'  },
+    rThigh:    { el: '#rThigh',    origin: '0px 0px'  },
+    rShin:     { el: '#rShin',     origin: '0px 0px'  },
+  };
+
+  // 預設姿勢
+  const POSES = {
+    idle: {
+      head: 0, lUpperArm: 10, lForearm: 0, rUpperArm: -10, rForearm: 0,
+      lThigh: 4, lShin: -6, rThigh: -4, rShin: 6
+    },
+    wave: {
+      head: 0, lUpperArm: -20, lForearm: -60, rUpperArm: -10, rForearm: 0,
+      lThigh: 2, lShin: -4, rThigh: -2, rShin: 4
+    }
+  };
+
+  // 初始化 transform-origin
+  Object.values(JOINTS).forEach(j => {
+    const el = document.querySelector(j.el);
+    el.style.transformOrigin = j.origin;
+  });
+
+  function applyPose(name, duration = 0.4) {
+    const pose = POSES[name];
+    if (!pose) return;
+    const tl = gsap.timeline({ defaults: { duration, ease: 'power3.out' }});
+    Object.entries(pose).forEach(([joint, angle]) => {
+      const j = JOINTS[joint];
+      if (j) tl.to(j.el, { rotate: angle }, 0);
+    });
+    return tl;
+  }
+
+  function animateWave() {
+    // 循環揮手：上臂小擺動 + 前臂大擺動
+    gsap.killTweensOf(['#lUpperArm', '#lForearm']);
+    gsap.to('#lUpperArm', { rotate: -10, repeat: -1, yoyo: true, duration: 0.6, ease: 'sine.inOut' });
+    gsap.to('#lForearm',  { rotate: -40, repeat: -1, yoyo: true, duration: 0.3, ease: 'sine.inOut' });
+  }
+
+  // 進場
+  applyPose('idle', 0);
+</script>
+</body>
+</html>
