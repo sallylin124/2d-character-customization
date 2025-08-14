@@ -5,9 +5,9 @@
 <button @click="applyPose('wave')">Wave</button>
 <button @click="animateWave()">Animate Wave</button>
 <button @click="stopAnim()">Stop</button>
-<select v-model="currentOutfitName" @change="applyOutfitPreset(currentOutfitName)">
-<option v-for="(v,k) in outfits" :key="k" :value="k">{{ k }}</option>
-</select>
+<!-- <select v-model="currentOutfitName" @change="applyOutfitPreset(currentOutfitName)"> -->
+<!-- <option v-for="(v,k) in outfits" :key="k" :value="k">{{ k }}</option> -->
+<!-- </select> -->
 </div>
  
     <!-- 以 SVG 做部件/關節樹；各 <g> 是一個關節 -->
@@ -185,6 +185,149 @@ const outfits = reactive({
       // leftHand:'src/assets/outfits/girlheadleft.png',
       rightHand:'src/assets/outfits/girlheadright.png' //need
     }
+  },
+  wearstyle2: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      hat:'src/assets/outfits/girlhead.png',
+      leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  wearstyle3: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      // bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  wearstyle4: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory1: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory2: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory3: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory4: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory5: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory6: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory7: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
+  },
+  accessory8: {
+    colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
+    slots:  {
+      //top:'src/assets/outfits/girlhead.png',
+      bottom:'src/assets/outfits/girlshirt.png', //need
+      //bottom:'src/assets/outfits/girlunderwear.png',
+      // hairFront:'/assets/outfits/hair_bangs_front.png',
+      // hairBack:'/assets/outfits/hair_long_back.png',
+      // hat:'src/assets/outfits/girlhead.png',
+      // leftHand:'src/assets/outfits/girlheadleft.png',
+      rightHand:'src/assets/outfits/girlheadright.png' //need
+    }
   }
 })
  
@@ -201,15 +344,8 @@ const props = defineProps({
     type: String,
     default: 'default' // 如果父元件沒有傳，預設值是空字串
   },
-  // props 屬性名稱是 wearstylepipe，型別是 String
-  wearstylepipe: { //wearstylepipe通道名
-    type: String,
-    default: 'default' // 如果父元件沒有傳，預設值是空字串
-  }
 });
 const currentOutfitName = toRef(props, 'selectedImageSrc')
-const wearstyle = toRef(props, 'wearstylepipe')
- 
 /** —— 初始化 transform-origin —— */
 onMounted(() => {
   Object.values(JOINTS).forEach(j => {

@@ -16,7 +16,7 @@
       <v-col v-for="(imagePath, index) in array"  cols="auto">
       </v-col>
     </v-row>
-      <CartoonRig :selectedImageSrc="CurrentGender"/>
+      <CartoonRig :selectedImageSrc="currentChart"/>
         </v-card>
       </v-col>
     <!--分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線-->
@@ -33,7 +33,7 @@
             v-for="(item, index) in items"
             :key="index"
             :value="index"
-            @click="CurrentGender = item.title" 
+            @click="currentChart = item.title; CurrentGender = item.title;" 
           ><!-- 點擊時更新 CurrentGender -->
           <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
@@ -54,7 +54,7 @@
             v-for="(item, index) in itemschoose"
             :key="index"
             :value="index"
-             @click="CurrentGender = item.title" 
+             @click="currentChart = item.title; CurrentStyle = item.title;" 
           >
             <v-list-item-title>{{item.title }}</v-list-item-title>
           </v-list-item>
@@ -71,10 +71,10 @@
       <v-menu activator="parent">
         <v-list>
           <v-list-item
-            v-for="(item, index) in items2"
+            v-for="(item, index) in itemschoose1"
             :key="index"
             :value="index"
-            
+            @click="currentChart = item.title; " 
           >
             <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
@@ -96,7 +96,14 @@ function myalert(v){
 <script>
   import CartoonRig from './CartoonRig.vue';
   import { ref, computed } from 'vue';
-  const CurrentGender = ref('default'); // 這裡可以切換成 'girl' 來測試
+  const currentChart = ref('default');
+  const CurrentGender = ref('default'); 
+  const CurrentStyle = ref('default'); 
+  const items = [
+    { title: 'boy' },
+    { title: 'girl' },
+  ];
+  
   const items1 = [
     { title: 'wearstyle1' },
     { title: 'wearstyle2' },
@@ -104,6 +111,22 @@ function myalert(v){
   const items12 = [
     { title: 'wearstyle3' },
     { title: 'wearstyle4' },
+  ];
+  const items2 = [
+    { title: 'accessory1' },
+    { title: 'accessory2' },
+  ];
+  const items21 = [
+    { title: 'accessory3' },
+    { title: 'accessory4' },
+  ];
+  const items22 = [
+    { title: 'accessory5' },
+    { title: 'accessory6' },
+  ];
+  const items23 = [
+    { title: 'accessory7' },
+    { title: 'accessory8' },
   ];
 
   // 使用 computed 屬性，根據 CurrentGender 決定要使用哪個陣列
@@ -120,24 +143,26 @@ function myalert(v){
       return itemschoose.value;
     }
   });
+  const itemschoose1 = computed(() => {
+    
+    if (CurrentStyle.value === 'wearstyle1') {
 
-  export default {
-    data: () => ({
-      items: [
-        { title: 'boy' },
-        { title: 'girl' },
-        
-      ],
+      return items2;
 
-      items2: [
-        { title: 'accessory1' },
-        { title: 'accessory2' },
-        
-      ],
-      CurrentGender:'default'
-    }),
-  }
-  
-  
+    } else if (CurrentStyle.value === 'wearstyle2'){
+      
+      return items21;
+    } else if (CurrentStyle.value === 'wearstyle3'){
+      
+      return items22;
+    } else if (CurrentStyle.value === 'wearstyle4'){
+      
+      return items23;
+    }
+    else {
+      
+      return itemschoose1.value;
+    }
+  });
   
 </script>
