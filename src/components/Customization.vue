@@ -3,14 +3,15 @@
   <div class="d-flex flex-column align-center">
     <div>
         <div class="text-h4" justify="start">
-        2D-Character-Customization
+        2D-Character-Customization-Game
         </div>
     <!--分隔線-->
+      <br></br>
     <v-row>
-    <v-col cols="6">
-      <div class="text-h6" justify="start">
-          Placement Area​ 
-        </div>
+    <v-col cols="8">
+      <!-- <div class="text-h6" justify="start">
+          Motion Control Area🎮​ 
+        </div> -->
      <v-card class="h-100">
       <v-row class="mt-4">
       <v-col v-for="(imagePath, index) in array"  cols="auto">
@@ -20,8 +21,10 @@
         </v-card>
       </v-col>
     <!--分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線-->
-      <v-col cols="6">
-    
+    <v-col cols="1">
+    </v-col>
+      <v-col cols="3">
+        <br></br>
      <v-btn
       color="primary"
     >
@@ -105,28 +108,28 @@ function myalert(v){
   ];
   
   const items1 = [
-    { title: 'wearstyle1' },
-    { title: 'wearstyle2' },
+    { title: 'casualboy' },
+    { title: 'suit' },
   ];
   const items12 = [
-    { title: 'wearstyle3' },
-    { title: 'wearstyle4' },
+    { title: 'casualgirl' },
+    { title: 'SailorSuit' },
   ];
   const items2 = [
-    { title: 'accessory1' },
-    { title: 'accessory2' },
+    { title: 'WhiteGloves' },
+    // { title: 'accessory2' },
   ];
   const items21 = [
-    { title: 'accessory3' },
-    { title: 'accessory4' },
+    { title: 'briefcase' },
+    // { title: 'accessory4' },
   ];
   const items22 = [
-    { title: 'accessory5' },
-    { title: 'accessory6' },
+    { title: 'PinkGloves' },
+    // { title: 'accessory6' },
   ];
   const items23 = [
-    { title: 'accessory7' },
-    { title: 'accessory8' },
+    { title: 'lollipop' },
+    // { title: 'accessory8' },
   ];
 
   // 使用 computed 屬性，根據 CurrentGender 決定要使用哪個陣列
@@ -145,17 +148,17 @@ function myalert(v){
   });
   const itemschoose1 = computed(() => {
     
-    if (CurrentStyle.value === 'wearstyle1') {
+    if (CurrentStyle.value === 'casualboy') {
 
       return items2;
 
-    } else if (CurrentStyle.value === 'wearstyle2'){
+    } else if (CurrentStyle.value === 'suit'){
       
       return items21;
-    } else if (CurrentStyle.value === 'wearstyle3'){
+    } else if (CurrentStyle.value === 'casualgirl'){
       
       return items22;
-    } else if (CurrentStyle.value === 'wearstyle4'){
+    } else if (CurrentStyle.value === 'SailorSuit'){
       
       return items23;
     }
