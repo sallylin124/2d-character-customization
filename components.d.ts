@@ -8,19 +8,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    2: typeof import('./src/components/FanPage copy 2.vue')['default']
-    2DCharacterCustomization: typeof import('./src/components/2D-Character-Customization.vue')['default']
-    3: typeof import('./src/components/FanPage copy 3.vue')['default']
-    4: typeof import('./src/components/FanPage copy 4.vue')['default']
     BatteryPage: typeof import('./src/components/BatteryPage.vue')['default']
     CartoonRig: typeof import('./src/components/CartoonRig.vue')['default']
-    ConnectorPage: typeof import('./src/components/ConnectorPage.vue')['default']
-    copy: typeof import('./src/components/FanPage copy.vue')['default']
-    CPUPage: typeof import('./src/components/CPUPage.vue')['default']
     Customization: typeof import('./src/components/Customization.vue')['default']
-    FanPage: typeof import('./src/components/FanPage.vue')['default']
-    GPUPage: typeof import('./src/components/GPUPage.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    PCBPage: typeof import('./src/components/PCBPage.vue')['default']
   }
 }
