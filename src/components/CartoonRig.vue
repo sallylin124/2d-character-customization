@@ -167,196 +167,196 @@ const outfits = reactive({
   boy: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      //top:'assets/outfits/boyhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      // bottom1:'assets/outfits/boybottom1.png',//need
-      bottom1:'assets/outfits/boyunderwear.png',
-      // bottom2:'assets/outfits/boyshirt.png',
-      hairFront:'assets/outfits/boyhead.png',
-      // hairBack:'assets/outfits/boyshirt.png',
-      // hat:'assets/outfits/boyhead.png',
-      // leftHand1:'assets/outfits/boyheadleft.png', //need
-      // rightHand1:'assets/outfits/boyheadright.png' //need
+      //top:'outfits/boyhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      // bottom1:'outfits/boybottom1.png',//need
+      bottom1:'outfits/boyunderwear.png',
+      // bottom2:'outfits/boyshirt.png',
+      hairFront:'outfits/boyhead.png',
+      // hairBack:'outfits/boyshirt.png',
+      // hat:'outfits/boyhead.png',
+      // leftHand1:'outfits/boyheadleft.png', //need
+      // rightHand1:'outfits/boyheadright.png' //need
     }
   },
   girl: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   casualboy: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      bottom1:'assets/outfits/boybottom1.png',//need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-       hairFront:'assets/outfits/boyhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      bottom1:'outfits/boybottom1.png',//need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+       hairFront:'outfits/boyhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   suit: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      // bottom1:'assets/outfits/boybottom1.png',//need
-      bottom2:'assets/outfits/boyshirt.png',
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-       hairFront:'assets/outfits/boyhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      // bottom1:'outfits/boybottom1.png',//need
+      bottom2:'outfits/boyshirt.png',
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+       hairFront:'outfits/boyhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   casualgirl: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   SailorSuit: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      // top:'assets/outfits/girlhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      bottom3:'assets/outfits/girlshirt1.png', //need
-      bottom4:'assets/outfits/girlbottom.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      // top:'outfits/girlhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      bottom3:'outfits/girlshirt1.png', //need
+      bottom4:'outfits/girlbottom.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   WhiteGloves: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      bottom1:'assets/outfits/boybottom1.png',//need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-       hairFront:'assets/outfits/boyhead.png',
-      leftHand1:'assets/outfits/boyheadleft.png', //need
-      rightHand1:'assets/outfits/boyheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      bottom1:'outfits/boybottom1.png',//need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+       hairFront:'outfits/boyhead.png',
+      leftHand1:'outfits/boyheadleft.png', //need
+      rightHand1:'outfits/boyheadright.png' //need
     }
   },
   accessory2: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      bottom1:'assets/outfits/boybottom1.png',//need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-       hairFront:'assets/outfits/boyhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      // rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      bottom1:'outfits/boybottom1.png',//need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+       hairFront:'outfits/boyhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      // rightHand:'outfits/girlheadright.png' //need
     }
   },
   briefcase: {
     colors: { skin:'#ffdcb0', arm:'#f8b47d', face:'#ffdcb0', leg:'#f8b47d', hand:'#ffdcb0', shoe:'#7fb3ff' },
     slots:  {
-      // top:'assets/outfits/girlhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      // bottom1:'assets/outfits/boybottom1.png',//need
-      bottom2:'assets/outfits/boyshirt.png',
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-       hairFront:'assets/outfits/boyhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      boyrightHand:'assets/outfits/boyheadright1.png' //need
+      // top:'outfits/girlhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      // bottom1:'outfits/boybottom1.png',//need
+      bottom2:'outfits/boyshirt.png',
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+       hairFront:'outfits/boyhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      boyrightHand:'outfits/boyheadright1.png' //need
     }
   },
   accessory4: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      // hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      // hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      rightHand:'outfits/girlheadright.png' //need
     }
   },
   PinkGloves: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      hat:'assets/outfits/girlhead.png',
-      leftHand:'assets/outfits/girlheadleft.png',
-      girlheadrightgloves:'assets/outfits/girlheadrightgloves.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      hat:'outfits/girlhead.png',
+      leftHand:'outfits/girlheadleft.png',
+      girlheadrightgloves:'outfits/girlheadrightgloves.png' //need
     }
   },
   accessory6: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      // hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      // hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      rightHand:'outfits/girlheadright.png' //need
     }
   },
   lollipop: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      // top:'assets/outfits/girlhead.png',
-      // bottom:'assets/outfits/girlshirt.png', //need
-      bottom3:'assets/outfits/girlshirt1.png', //need
-      bottom4:'assets/outfits/girlbottom.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      rightHand:'assets/outfits/girlheadright.png' //need
+      // top:'outfits/girlhead.png',
+      // bottom:'outfits/girlshirt.png', //need
+      bottom3:'outfits/girlshirt1.png', //need
+      bottom4:'outfits/girlbottom.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      rightHand:'outfits/girlheadright.png' //need
     }
   },
   accessory8: {
     colors: { skin:'#ffe8c6', arm:'#ffc48a', face:'#ffe8c6', leg:'#ffc48a', hand:'#ffe8c6', shoe:'#ff9fd1' },
     slots:  {
-      //top:'assets/outfits/girlhead.png',
-      bottom:'assets/outfits/girlshirt.png', //need
-      //girlunderwear:'assets/outfits/girlunderwear.png',
-      // hairFront:'/assets/outfits/hair_bangs_front.png',
-      // hairBack:'/assets/outfits/hair_long_back.png',
-      // hat:'assets/outfits/girlhead.png',
-      // leftHand:'assets/outfits/girlheadleft.png',
-      rightHand:'assets/outfits/girlheadright.png' //need
+      //top:'outfits/girlhead.png',
+      bottom:'outfits/girlshirt.png', //need
+      //girlunderwear:'outfits/girlunderwear.png',
+      // hairFront:'/outfits/hair_bangs_front.png',
+      // hairBack:'/outfits/hair_long_back.png',
+      // hat:'outfits/girlhead.png',
+      // leftHand:'outfits/girlheadleft.png',
+      rightHand:'outfits/girlheadright.png' //need
     }
   }
 })
