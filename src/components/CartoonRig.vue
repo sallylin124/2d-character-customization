@@ -4,15 +4,17 @@
           Motion Control Area🎮​ 
         </div>
 <div class="toolbar">
-<button @click="applyPose('idle')">Default</button>
+
 <!-- <button @click="applyPose('wave')">Wave</button> -->
-<button @click="animateWave()">Wave▶️</button>
-<button @click="stopAnim()">Stop⏸️</button>
+<button @click="animateWave()">Wave▶️</button>→
+<button @click="stopAnim()">Stop⏸️</button>→
+<button @click="applyPose('idle')">Cancel Motion⏹️</button>
 <!-- <select v-model="currentOutfitName" @change="applyOutfitPreset(currentOutfitName)"> -->
 <!-- <option v-for="(v,k) in outfits" :key="k" :value="k">{{ k }}</option> -->
 <!-- </select> -->
 </div>
- 💡Please click stop first to return to the default.
+ <!-- <p>Click order: Wave▶️ → Stop⏸️ → Default</p> -->
+<p>💡You can repeatedly click the【 Wave▶️】button.</p>
 
     <!-- 以 SVG 做部件/關節樹；各 <g> 是一個關節 -->
 <svg ref="svgRef" viewBox="0 0 200 300" class="rig-svg">

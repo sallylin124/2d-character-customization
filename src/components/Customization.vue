@@ -2,29 +2,28 @@
 <v-container class="fill-height" max-width="900">
   <div class="d-flex flex-column align-center">
     <div>
-        <div class="text-h4" justify="start">
+      <!-- <div class="d-flex justify-center w-100">
+      <img 
+          :src="titleImageSrc" 
+          alt="2D-Character-Customization-Game" 
+          style="max-width: 40vw; height: auto; margin-bottom: 10px;"
+        >
+    </div> -->
+        <div class="text-h4 text-center text-blue-darken-4 font-weight-bold" > 
         2D-Character-Customization-Game
         </div>
+        
     <!--分隔線-->
       <br></br>
     <v-row>
-    <v-col cols="8">
-      <!-- <div class="text-h6" justify="start">
-          Motion Control Area🎮​ 
-        </div> -->
-     <v-card class="h-100">
-      <v-row class="mt-4">
-      <v-col v-for="(imagePath, index) in array"  cols="auto">
-      </v-col>
-    </v-row>
-      <CartoonRig :selectedImageSrc="currentChart"/>
-        </v-card>
-      </v-col>
+    
     <!--分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線分隔線-->
-    <v-col cols="1">
-    </v-col>
-      <v-col cols="3">
-        <br></br>
+    <!-- <v-col cols="12" md="3">
+    </v-col> -->
+      <v-col  sm="12" md="12">
+        <!-- <br></br> -->
+      <v-row justify="center">
+        <!-- <v-col cols="3"> -->
      <v-btn
       color="primary"
     >
@@ -44,8 +43,10 @@
       </v-menu>
       
     </v-btn>
-    <br></br>
-    <br></br>
+        <!-- </v-col> -->
+    <!-- <v-col cols="3"> -->
+      <span> &nbsp; &nbsp; </span>
+      <span>
        <v-btn
       color="primary"
       >
@@ -64,8 +65,13 @@
         </v-list>
       </v-menu>
     </v-btn>
+    </span>
+    <!-- </v-col> -->
+    
       <br></br>
       <br></br>
+      <!-- <v-col cols="3"> -->
+        <span> &nbsp; &nbsp; </span>
     <v-btn
       color="primary"
     >
@@ -84,7 +90,21 @@
         </v-list>
       </v-menu>
     </v-btn>
+    <!-- </v-col> -->
+    </v-row justify="center">
 
+      </v-col>
+      <v-col  sm="12" md="12">
+      <!-- <div class="text-h6" justify="start">
+          Motion Control Area🎮​ 
+        </div> -->
+     <v-card class="h-100">
+      <v-row class="mt-4">
+      <v-col v-for="(imagePath, index) in array"  cols="auto">
+      </v-col>
+    </v-row>
+      <CartoonRig :selectedImageSrc="currentChart"/>
+        </v-card>
       </v-col>
       </v-row>
     </div>
@@ -95,10 +115,12 @@
 function myalert(v){
   alert(v)
 }
+
 </script>
 <script>
   import CartoonRig from './CartoonRig.vue';
   import { ref, computed } from 'vue';
+  import titleImageSrc from '@/assets/outfits/title.png';
   const currentChart = ref('default');
   const CurrentGender = ref('default'); 
   const CurrentStyle = ref('default'); 
